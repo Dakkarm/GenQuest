@@ -15,9 +15,9 @@ GenQuest is a web application that generates daily general culture questions. Th
     npm install
     ```
 
-3. Create a `.env` file in the root directory and add your OpenAI API key:
+3. Create a `.env` file in the root directory and add your Rapid API key:
     ```
-    OPENAI_API_KEY='your_openai_api_key'
+    API_KEY='your_rapid_api_key'
     ```
 
 ## Usage
@@ -31,7 +31,7 @@ GenQuest is a web application that generates daily general culture questions. Th
 
 ## GitHub Actions Workflow
 
-The project includes a GitHub Actions workflow defined in [workflows/generate-questions.yml](workflows/generate-questions.yml) that runs daily at 11:45 AM UTC to update the questions.
+The project includes a GitHub Actions workflow defined in [workflows/generate-questions.yml](workflows/generate-questions.yml) that runs daily at 12:00 PM UTC to update the questions.
 
 ## Files
 
@@ -46,7 +46,6 @@ The project includes a GitHub Actions workflow defined in [workflows/generate-qu
 - axios
 - dotenv
 - express
-- openai
 
 ## License
 

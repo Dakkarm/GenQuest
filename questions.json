@@ -1,0 +1,12 @@
+{
+  "questions": [
+    {
+      "content": "Who wrote the novel 'Pride and Prejudice', and in which century was it set?",
+      "answer": "The novel 'Pride and Prejudice' was written by Jane Austen and it is set in the late 18th century, specifically during the Georgian era in England."
+    },
+    {
+      "content": "What is the scientific explanation behind the changing of colors in a chameleon's skin, and which animal shares this ability?",
+      "answer": "A chameleon changes its skin color through the use of specialized cells called chromatophores, which contain pigments. By expanding or contracting these cells, a chameleon can alter its color. Cuttlefish also share this ability, and they can change their color and pattern in a matter of seconds for camouflage and communication."
+    }
+  ]
+}

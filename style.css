@@ -1,29 +1,124 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h1 {
-    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+#language-switcher {
+    margin-top: 10px;
+}
+
+#language-switcher button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#language-switcher button:hover {
+    background-color: #0056b3;
 }
 
 #questions {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Card Styles */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 200px; /* Ensure a fixed height for the card */
 }
 
-li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center; /* Center text inside the card */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #language-switcher button {
+        padding: 8px 16px;
+        margin: 5px 2px;
+    }
+
+    .card {
+        padding: 15px;
+        height: auto; /* Allow height to adjust on smaller screens */
+    }
+
+    button {
+        padding: 8px 16px;
+    }
 }

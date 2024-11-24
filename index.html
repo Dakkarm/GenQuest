@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Domande di Cultura Generale</h1>
-    
-    <div>
-        <h2>Domanda:</h2>
-        <p id="question-display">Premi il bottone per generare una domanda</p>
-    </div>
-
-    <div>
-        <h2>Risposte Corrette: <span id="correct-answers">0</span></h2>
-    </div>
-
+    <header>
+        <h1>Daily GenQuest:</h1>
+        <div id="language-switcher">
+            <button onclick="switchLanguage('it')">Italiano</button>
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('pt')">Português</button>
+        </div>
+    </header>
+    <div id="questions"></div>
     <script src="script.js"></script>
 </body>
 </html>
