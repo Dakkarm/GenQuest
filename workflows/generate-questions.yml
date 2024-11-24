@@ -1,0 +1,35 @@
+name: Generate Daily Questions
+
+on:
+  schedule:
+    - cron: '45 11 * * *' # This runs the action daily at 11.45 AM UTC
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  generate-questions:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run get_questions.js
+      run: node get_questions.js
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add questions.json
+        git commit -m 'Update questions.json'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
